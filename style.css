@@ -1,0 +1,954 @@
+/* This will be the style document for the landing page */
+
+/* TODO 
+1. Make it so that when narrowing the browser, the padding gives space to content. Maybe using two nested flex divs, the outside one to center, the inside one with space-between.
+item 2 */
+/* 
+@media (min-width:640px) { body {font-size:1rem;} }
+@media (min-width:960px) { body {font-size:1.2rem;} }
+@media (min-width:1100px) { body {font-size:1.5rem;} } */
+
+body {
+    margin: 0;
+    
+
+    /* font-family: Garamond, serif; */
+    /* font-family: "Raleway"; */
+    font-family: "Montserrat", sans-serif;
+    /* colors original */
+    /* --almostwhite: #fffdfa;
+    --almostred: rgb(224, 22, 31);
+    --almostyellow: )rgb(246, 213, 103;
+    --almostblue: #1f2937; */
+
+    --almostwhite: #D8D7D7;
+    --almostred: #CC3446;
+    --almostyellow: #F9B126;
+    --almostblue: #1f2937;
+
+    /* font sizes */
+    --fontsize1: 14px;
+    --fontsize2: 18px;
+    --fontsize3: 24px;
+    --fontsize4: 54px;
+    --fontsize5: 62px;
+
+
+    /* colors new */
+    --almostwhite: #fffdfa;
+    /* --almostred: #C6122E; */
+    /* --almostyellow: #FFC125; */
+    /* --almostblue: #2A2A50; */
+    --greyblue: #5C749B;
+}
+
+/* Establish font types */
+.sansSerif {
+    font-family: "Hind", sans-serif;
+}
+.serif {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* HEADER START */
+/* Contains logo, menu and social media links */
+.header-container {
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    padding-left: 130px;
+    background-color: rgba(0,0,0,.4);
+    /* color: rgb(224, 22, 31); */
+    color: var(--almostwhite);
+    font-size: var(--fontsize3); /* before it was 24 */
+    /* font-weight: bolder; */
+    min-width: 500px;
+    overflow: hidden;
+    /* position: absolute;
+    z-index: 9; */
+    /* height: 34px; */
+}
+
+ul.navbar {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    font-size: var(--fontsize2);
+}
+
+.navlinks {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin-right: 32px;
+
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+}
+
+.navlink {
+    color: var(--almostyellow);
+    /* color: #fffdfa; */
+    color: white;
+}
+
+a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: inherit;   
+}
+
+.header-left {
+    display: flex;
+    padding: 8px;
+    /* Replace variable name with rgb values to return to white */
+    background-color: rgba(--almostwhite, 1);
+    /* max-height: 100px; */
+    align-items: center;
+    /* position: absolute; */
+    z-index: 10;
+}
+
+img.logoImage {
+ /* max-height: 100px; */
+ height: 64px;
+ transform: scale(1.6); 
+ -webkit-transform: scale(1.6); /* Safari */
+ /* margin-top: 2em; */
+/* position: absolute; */
+ overflow: hidden;
+}
+
+.logoTitle {
+    /* display: flex;
+    max-width: 100px; */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Collapsible menu CURRENTLY NOT DISPLAYED*/
+.topnav {
+    display: none;
+    overflow: normal;
+    background-color: #333;
+    position: relative;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    padding: auto;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+/* Social media links */
+.social-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.social {
+    display: flex;
+    padding: 8px;
+    height: inherit;
+    align-items: center;
+    border: solid .5px black;
+    -webkit-filter: invert(100%);
+    border-radius: 50%;
+    background-color: transparent;
+}
+.socialLink {
+    height: .75em;
+    width: auto;
+}
+/* HEADER END */
+
+
+
+/* LANDING START */
+#landing-section {
+    background: linear-gradient(rgba(5, 13, 11, .6), rgba(5, 13, 11, .6)), url("images/lance-asper-G9fpJ0OozaI-unsplash_compressed.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Change to scroll for better mobile performance */
+    height: 100vh;
+    display: flex;
+    position: relative;
+    color: var(--almostwhite);
+}
+
+@media (max-width: 768px) {
+    #landing-section {
+        /* background: linear-gradient(rgba(5, 13, 11, .6), rgba(5, 13, 11, .6)), url("images/landing_screenshot.png"); */
+        background-size: cover;
+        background-attachment: scroll; /* Ensure background is not fixed on mobile */
+    }
+}
+
+#mission_section {
+    background-size: cover; 
+    background-image: url("images/florida_flag.png");
+    background: linear-gradient(to right, rgba(0,0,0,.0), rgba(0,0,0,.5), rgba(0,0,0,.5), rgba(0,0,0,1)), url("images/florida_flag.png");
+    background-repeat: no-repeat;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    padding-left: 130px;
+    color: var(--almostwhite);
+}
+
+.section {
+    min-width: 500px;
+    padding: 50px 100px;
+    background-color: var(--almostwhite);
+}
+.section.one {
+    /* gap: 32px; Chose to use padding on section-left instead*/
+    background-color: var(--almostyellow);
+    text-align: left;
+}
+/* Landng quote */
+.quote-container {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column; */
+    height: fit-content;
+    /* padding-top: 40vh; */
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#slide-button {
+    margin-top: 80px;
+    background-color: transparent;
+    font-size: var(--fontsize2);
+    border: solid 1px var(--almostwhite);
+}
+
+.quote {
+    margin-top: 120px;
+    text-align: center;
+    /* text-align-last: right;  */
+    /* font-size: var(--fontsize5); */
+    font-size:calc(100% + 3.7vw);
+    /* font-style: italic; */
+    color: var(--almostwhite);
+    /* min-height: 4em; */
+}
+
+/* Currently not in use */
+.quote-author {
+    margin-top: 1.5em;
+    margin-right: 100px;
+    /* margin-left: auto; */
+    align-self: flex-end;
+}
+.quote-author-name {
+    font-size: var(--fontsize2);
+    color: var(--almostwhite);
+    font-weight: bold;
+}
+.quote-author-context {
+    font-size: var(--fontsize2);
+    color: var(--almostwhite);
+}
+
+
+/* MISSION SECTION */
+.mission-container {
+    max-width: 100%; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
+    /* padding: 10px; */
+    position: relative;
+}
+
+#mission_section {
+    /* background-color: rgb(39, 44, 43); */
+    background: linear-gradient(to left, rgba(0,0,0,.0), rgba(0,0,0,.5), rgba(0,0,0,.5), rgba(0,0,0,1)), url("images/florida_flag.png");
+    background-size: cover; 
+    object-fit: cover;
+    /* background-image: url("images/florida_flag.png"); */
+    /* background-position: center; */
+    /* background: linear-gradient(to right, rgba(0,0,0,.1), rgba(0,0,0,.4), rgba(0,0,0,1)), url("images/florida_flag.png"); */
+    /* background-position: 300px; */
+    background-repeat: no-repeat;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    padding-left: 130px;
+    color: var(--almostwhite);
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+
+.mission-left {
+    display: flex;
+    flex-direction: column; 
+    /* align-items: center; */
+    max-width: fit-content;
+    /* padding-right: 64px; */
+}
+
+#members_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section.founding {
+    background-color: black;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    /* background-image: url(images/image7.jpg); */
+    background: linear-gradient(rgba(5, 13, 11,.9), rgba(5, 13, 11,.8)), url("images/tim-mossholder-gDN3m6Xc1bw-unsplash.jpg");
+    /* background-color: var(--almostblue); */
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.HeroMain.mission {
+    color: white;
+    font-size: var(--fontsize4);
+    margin-bottom: 16px;
+    font-weight: bolder;
+    /* text-shadow: -0.5px -0.5px 0 gray, .5px -.5px 0 gray, -.5px .5px 0 gray, .5px .5px 0 gray; */
+}
+
+.HeroSecondary.mission {
+    color: white;
+    font-size: var(--fontsize2);
+    max-width: 65ch;
+    margin-left: 64px;
+    /* text-align: center; */
+    line-height: 150%;
+    margin-bottom: 64px;
+    /* text-shadow: -0.3px -0.3px 0 grey, .3px -.3px 0 grey, -.3px .3px 0 grey, .3px .3px 0 gray; */
+    /* text-shadow: -0.3px -0.3px 0 darkgrey, .3px -.3px 0 darkgrey, -.3px .3px 0 darkgrey, .3px .3px 0 darkgrey; */
+}
+
+/* new slides section */
+#new-slides-section {
+    /* display: none; */
+    display: flex;
+    height: 95vh;
+    background-color:#D3332B;
+    /* padding: 100px; */
+    position: relative;
+}
+
+.overlap {
+    color: white;
+}
+
+.new-class-left {
+    flex-grow: 1;
+    flex-basis: 0;
+    font-size: var(--fontsize3);
+    overflow: auto;
+}
+
+.new-class-intro {
+    font-size: var(--fontsize4);
+    font-weight: bold;
+    margin: 0px 10vw;
+    margin-top: 7vw;
+    margin-bottom: 40px;
+    flex-grow: 1;
+    flex-basis: 0;
+    /* background-color: rgba(0,0,0,.5); */
+    position: absolute;
+    word-wrap: break-word;
+}
+.new-class-middle {
+    /* font-size: var(--fontsize3); */
+    font-size: calc(85% + 0.1vw);
+    /* font-size: 1.5vw; */
+    line-height: 1.5;
+    padding: 3.5vw;
+    flex-grow: 1;
+    flex-basis: 0;
+    /* background-color: rgba(31, 41, 55, 0.5); */
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    word-wrap: break-word;
+    transform: translate(0, -40%);
+    max-width: 65vw;
+    left: 18vw;
+    right:10vw;
+    top: 63%;
+}
+
+.author {
+    text-align: end;
+    margin: 0px 0px;
+    margin-top: 16px;
+    font-size: var(--fontsize2);
+}
+
+.new-class-right {
+    flex-grow: 2;
+    /* margin: 24px; */
+    background-color: var(--almostyellow);
+    /* background-image: url("./images/beachside_iStock-983502316.jpg"); */
+    /* background: linear-gradient(rgba(31, 41, 55,.2), rgba(31, 41, 55,.2)), url("images/features/denys-kostyuchenko-FQjUaIMQF3Q-unsplash.jpg"); */
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url("images/legacy_state_house.jpg");
+    background-size: cover;
+}
+
+
+
+#features_section {
+    background-color: var(--almostwhite);
+    padding-top: 100px;
+}
+
+/* Feature cards */
+.cards-container.features {
+    gap: 75px;
+    overflow: visible;
+}
+
+.content.features {
+    padding: 0;
+}
+
+.section-title.features {
+    font-size: var(--fontsize4);
+    color: var(--almostred);
+    font-weight: bolder;
+    margin-bottom: 1em;
+}
+
+.cards-container.features.launch {
+    padding-bottom: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.launch_container {
+    display: flex;
+    display: none;
+    background-color:var(--almostwhite);
+    padding: 16px;
+    padding-bottom: 8px; 
+    /* looks like there is an extra padding at bottom somewhow */
+    margin-bottom: 64px;
+    min-width: 500px;
+    flex-basis: content;
+    overflow: auto;
+}
+
+.card.feature.launch {
+    width: fit-content;
+}
+
+.launch_text {
+    color: var(--almostred);
+    display: flex;
+    max-width: 500px;
+    margin-left: 32px;
+    flex-direction: column;
+    /* align-items: start; */
+    /* justify-self: start; */
+    justify-content: center;
+    overflow: none;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+
+.card.feature {
+    display: flex;
+    width: 350px;
+    /* flex-direction: column; */
+    text-align: center;
+    flex-wrap: wrap;
+    /* background-color: rgba(31, 41, 55, 0.1); */
+    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+    margin-bottom: 10px;
+}
+.card.feature {
+    display: flex;
+    flex-shrink: 0;
+    /* flex-direction: column; */
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.card.feature:hover{
+    filter: opacity(70%);
+}
+
+.card-image.feature {
+    width: 100%;
+    height: 220px;
+    border: none;
+    border-radius: 0;
+    /* margin-bottom: 8px; */
+    overflow: hidden;
+}
+
+img.feature {
+    height: 100%;
+    width: 100%;
+    object-fit: cover
+}
+
+.feature-description {
+    font-weight: normal;
+    font-size: var(--fontsize1);
+    margin-top: 12px;
+    text-align: left;
+    color: #D3332B;
+}
+
+.subtext.feature {
+    font-size: var(--fontsize3);
+    color: var(--almostred);
+    /* margin: 4px 0; */
+    text-align: left;
+    font-weight: bold;
+    /* letter-spacing:0cap; */
+    margin: 0px 0px;
+    line-height:100%;
+    /* font-family: "Montserrat"; */
+}
+
+.feature-author {
+    /* display: none; */
+    margin: 12px 0px;
+    /* padding-top: 8px; */
+    font-size: var(--fontsize1);
+    text-align: left;
+    color: #2D0D0B;
+    /* border-top: solid .5px var(--almostblue); */
+    line-height:120%;
+    margin-bottom: 12px;
+}
+
+
+.subtext.feature.launch {
+    font-size: var(--fontsize3);
+    /* font-size: 24px;
+    color: rgb(224, 22, 31);
+    text-align: left;
+    font-weight: bold; */
+    /* overflow-wrap: break-word; */
+}
+/* feature cards over */
+
+
+.HeroMain.founding {
+    color: var(--almostwhite);
+    font-size: var(--fontsize4);
+    font-weight: bolder;
+    margin-bottom: 16px;
+}
+
+.HeroMain.founding.founders {
+    color: var(--almostwhite);
+    font-size: var(--fontsize4);
+    font-weight: bolder;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+
+}
+
+.HeroSecondary.founding {
+    color:var(--almostwhite);
+    font-size: var(--fontsize2);
+    /* text-shadow: -0.3px -0.3px 0 grey, .3px -.3px 0 grey, -.3px .3px 0 grey, .3px .3px 0 gray; */
+}
+
+.section.features {
+    background: var(--almostwhite);
+    padding-bottom: 50px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.section-header.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.section-title {
+    font-size: var(--fontsize4);
+    color: var(--almostred);
+    font-weight: bolder;
+}
+
+
+/* General cards */
+.cards-container {
+    display: flex;
+    /* gap: 100px; */
+    margin: 0 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.cards-container.features {
+    margin: 0;
+}
+
+.card {
+    text-align: center;
+}
+
+/* .card-image {
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(246, 213, 103);
+    border-radius: 8px;
+    margin: 8px auto;
+} */
+
+/* .subtext {
+    font-size: 18px;
+    color: rgb(224, 22, 31);
+} */
+
+
+/* Member cards */
+.cards-container.members {
+    gap: 75px;
+}
+
+.card.member {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.card-image.member {
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 0;
+    margin: 8px auto;
+    overflow: hidden;
+}
+
+img.member {
+    max-width: 100%;
+}
+
+.subtext.member {
+    font-size: var(--fontsize2);
+    color: var(--almostwhite);
+    margin: 4px 0;
+}
+
+.subtext.member.name {
+    font-size: var(--fontsize2);
+    font-weight: bold;
+}
+
+.subtext.member.position .subtext.member.affiliation  {
+    font-size: var(--fontsize2);
+}
+
+.subtext.member.position  {
+    font-size: var(--fontsize2);
+    font-style: italic;
+}
+
+/* .section.three {
+    background-color: black;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-image: url(images/malaysia.jpg);
+    background-color: rgba(0,0,0,0.5);
+    background: linear-gradient(rgba(0,0,0,.6), rgba(255,255,255,.2)), url("images/malaysia.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover; 
+} */
+
+
+/* Section banner */
+.section-banner {
+    height: 3vw;
+    background-color: var(--almostwhite);
+}
+
+.section-banner.brown {
+    height: 1vw;
+    background-color: white;
+}
+
+
+
+/* Topics section */
+.topics-container {
+    display: flex;
+    /* height: 450px; */
+    flex-wrap: wrap;
+    background-color: var(--almostwhite);
+    /* padding: 32px; */
+}
+
+.topic {
+    display: flex;
+    /* box-sizing: border-box; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 300px;
+    min-width: 25vw;
+    min-height: 200px;
+    /* max-width: 50vw; */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 1;
+    padding: 100px;
+    margin: 2px;
+}
+
+.topicOne {
+
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("images/topics/china_placeholder.png");
+    background-size: cover;
+}
+
+.topicTwo {
+
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("images/malaysia.jpg");
+    background-size: cover;
+}
+
+.topicThree {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("images/ships_compressed.jpg");
+    background-size: cover;
+
+}
+
+.topicFour {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("images/features/denys-kostyuchenko-FQjUaIMQF3Q-unsplash.jpg");
+    background-size: cover;
+
+}
+
+.topicText {
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+
+.topic-title {
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+}
+
+.topic-subtext {
+    font-size: var(--fontsize2);
+    color: white;
+}
+
+
+
+/* CALL TO ACTION SECTION */
+.section.four {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--almostwhite);
+    padding: 0 0;
+
+}
+.call-to-action {
+    background-color: var(--almostyellow);
+    display: flex;
+    width: 100%;
+    margin: 0px 2px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 70px;
+    /* border-radius: 25px; */
+    gap: 36px;
+}
+.action-title {
+    font-size: var(--fontsize3);
+    font-weight: bold;
+    color: white;
+}
+.action-subtext {
+    font-size: var(--fontsize2);
+    color: white;
+}
+
+
+html{
+    scroll-behavior: smooth;
+    font-size:100%;
+  }
+
+/* BUTTONS */
+button {
+    text-align: center;
+    font-size: var(--fontsize3);
+    background: var(--almostyellow);
+    /* border-radius: 8px; */
+    border: none;
+    color: white;
+    font-family: inherit;
+    padding: 8px 16px;
+    margin: 8px 0;
+    cursor: pointer;
+    /* font-weight: bold; */
+  }
+button.action-button {
+    text-align: center;
+    font-size: var(--fontsize3);
+    background: var(--almostyellow);
+    /* border-radius: 8px; */
+    border: solid 2px white;
+    color: white;
+    font-family: inherit;
+    padding: 8px 32px;
+    margin: 8px 0;
+  }
+  button.notifications {
+    text-align: center;
+    font-size: inherit;
+    background: var(--almostyellow);
+    /* border-radius: 8px; */
+    /* border: solid 2px white; */
+    border: none;
+    color: white;
+    font-family: inherit;
+    margin: 0;
+    padding: 8px 32px;
+  }
+button:hover{
+    filter: opacity(70%);
+}
+
+/* FOOTER */
+  .footer {
+    background-color: var(--almostblue);
+    display: flex;
+    justify-content: center;
+    min-width: 700px;
+    padding: 0px 250px;
+  }
+
+  .footer-text {
+    text-align: center;
+    color:var(--almostwhite);
+    padding: 24px;
+    font-size: var(--fontsize1);
+  }
+
+
+  /* COLLAPSIBLE START */
+  /* from https://www.w3schools.com/howto/howto_js_collapsible.asp */
+  .collapsible {
+    /* background-color: #777; */
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 24px;
+    margin: 32px 0;
+  }
+
+  .collapsible.features {
+    color: var(--almostred);
+  }
+  .collapsible.features:after {
+    color: var(--almostred);
+  }
+  
+    /* replaced ".active" with "active_col" to avod styling slideshow buttons*/
+  .active_col, .collapsible:hover {
+    /* background-color: #555; */
+    background-color: transparent;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    /* float: right; */
+    /* display: inline-block; */
+    align-content: center;
+    margin-left: 5px;
+  }
+  
+  /* replaced ".active" with "active_col" to avod styling slideshow buttons*/
+  .active_col:after { 
+    content: "\2212";
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    /* background-color: #f1f1f1; */
+  }
