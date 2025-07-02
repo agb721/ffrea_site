@@ -806,6 +806,26 @@ img.member {
 }
 
 
+/* Signup to newsletter section */
+.section.newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--almostwhite);
+    padding: 0 0;
+}
+
+.newsletter-signup {
+    background-color: var(--almostyellow);
+    display: flex;
+    width: 100%;
+    margin: 0px 2px;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 70px;
+    /* border-radius: 25px; */
+    gap: 36px;
+}
 
 /* CALL TO ACTION SECTION */
 .section.four {
@@ -858,6 +878,18 @@ button {
     /* font-weight: bold; */
   }
 button.action-button {
+    text-align: center;
+    font-size: var(--fontsize3);
+    background: var(--almostyellow);
+    /* border-radius: 8px; */
+    border: solid 2px white;
+    color: white;
+    font-family: inherit;
+    padding: 8px 32px;
+    margin: 8px 0;
+  }
+
+  button.signup-button {
     text-align: center;
     font-size: var(--fontsize3);
     background: var(--almostyellow);
